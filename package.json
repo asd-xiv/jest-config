@@ -18,7 +18,10 @@
   },
   "type": "module",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "default": "./src/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
   },
   "scripts": {
     "----UTIL": "",
@@ -26,7 +29,10 @@
     "format": "eslint --fix .",
     "----CODE-ANALYSIS": "",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "---BUILD": "",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.lib.json",
+    "build": "npm run build:types"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.8.0",

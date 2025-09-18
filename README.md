@@ -18,7 +18,7 @@ In your `jest.config.js` file, add the following:
 ```text
 import baseConfig from "@asd14/jest-config"
 
-/** @satisfies {import("jest").Config} */
+/** @satisfies {import("@jest/types").Config.InitialOptions} */
 export default /** @type {const} */ ({
   ...baseConfig,
   testEnvironment: "jsdom",

@@ -5,7 +5,7 @@ import { findUpSync } from "./utils/find-up-sync.js"
 const MONOREPO_ROOT = path.dirname(findUpSync("nx.json"))
 const DIRNAME = path.dirname(fileURLToPath(import.meta.url))
 
-/** @satisfies {import("jest").Config} */
+/** @satisfies {import("@jest/types").Config.InitialOptions} */
 export default /** @type {const} */ ({
   // Use SWC, the Rust based transpiler, instead of Babel
   transform: {

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@asd14/jest-config",
+  "version": "0.1.0",
+  "description": "ASD14's reusable Jest config",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asd-xiv/jest-config.git"
+  },
+  "nx": {
+    "tags": [
+      "type:lib"
+    ]
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "----UTIL": "",
+    "prepare": "git config --local core.hooksPath .githook",
+    "format": "eslint --fix .",
+    "----CODE-ANALYSIS": "",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.8.0",
+    "jest-environment-jsdom": "^30.1.2"
+  },
+  "devDependencies": {
+    "@asd14/eslint-config": "^14.4.0",
+    "@asd14/prettier-config": "^1.1.0",
+    "@asd14/ts-config": "^1.1.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/git": "^10.0.1",
+    "@swc/jest": "^0.2",
+    "@types/jest": "^30.0.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "eslint": "^9.35.0",
+    "prettier": "^3.6.2",
+    "semantic-release": "^24.2.8",
+    "typescript": "^5.9.2"
+  },
+  "devPeerDependencies": {
+    "jest": "^30"
+  }
+}
